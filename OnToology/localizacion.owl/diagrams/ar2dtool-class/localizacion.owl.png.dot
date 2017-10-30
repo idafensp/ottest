@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "wgs84_pos:SpatialThing" ; /*classes style*/
+	"http://aemet.linkeddata.es/localizacion.owl" -> "http://www.w3.org/2003/01/geo/wgs84_pos" [ label = "owl:imports" ];
+	"http://aemet.linkeddata.es/localizacion.owl" -> "http://dia.fi.upm.es/geografica.owl" [ label = "owl:imports" ];
+	"wgs84_pos:location" -> "foaf:based_near" [ label = "rdfs:subPropertyOf" ];
+	"wgs84_pos:SpatialThing" -> "owl:Thing" [ label = "wgs84_pos:alt" ];
+	"owl:Thing" -> "wgs84_pos:SpatialThing" [ label = "wgs84_pos:location" ];
+	"wgs84_pos:SpatialThing" -> "owl:Thing" [ label = "wgs84_pos:lat" ];
+	"wgs84_pos:SpatialThing" -> "owl:Thing" [ label = "wgs84_pos:long" ];
+
+}
